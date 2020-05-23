@@ -1,0 +1,12 @@
+author: "devine-kevin"
+description: "Use phpmd in a github action"
+
+branding:
+  icon: "check"
+  color: "blue"
+
+name: "phpmd-action"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
