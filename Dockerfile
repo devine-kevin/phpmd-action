@@ -1,7 +1,7 @@
 # Container image that runs your code
 FROM php:7.4-alpine
 
-RUN apt-get update && apt-get install git
+RUN apk add git
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN mkdir /composer
