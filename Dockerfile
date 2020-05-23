@@ -8,7 +8,7 @@ RUN mkdir /composer
 ENV COMPOSER_HOME=/composer
 RUN echo "memory_limit=-1" > $PHP_INI_DIR/conf.d/memory-limit.ini
 
-RUN composer global require "phpmd/phpmd"
+RUN composer global require --no-suggest --no-scripts "phpmd/phpmd"
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
